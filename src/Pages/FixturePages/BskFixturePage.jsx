@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useState } from "react";
 import { useLocation } from "react-router";
 import { useQuery } from "react-query";
 import FixtureDetail from "../../Layouts/FixtureDetail";
@@ -23,11 +23,9 @@ export default function BskFixturePage() {
 
   const { isLoading, isError, refetch } = useFetchBskData(formattedDate);
 
-  useEffect(() => {
-    if (!bskData?.[formattedDate]) {
-      refetch();
-    }
-  }, [formattedDate, bskData, refetch]);
+  if (!bskData?.[formattedDate]) {
+    refetch();
+  }
 
   const bestMatch =
     bskData?.[formattedDate] &&
@@ -40,8 +38,6 @@ export default function BskFixturePage() {
     (obj) => obj.homeTeam.name === bestMatch.bestMatch.target
   );
 
-  console.log(fixture);
-
   const {
     data: fixtureLineups,
     isLoading: isLineupsLoading,
@@ -52,7 +48,7 @@ export default function BskFixturePage() {
       instance
         .get(`/basketball/match/${fixture?.id}/lineups`)
         .then((res) => res.data),
-    { refetchOnWindowFocus: false, enabled: false }
+    { refetchOnWindowFocus: false, enabled: !!fixture?.id }
   );
 
   const {
@@ -65,7 +61,7 @@ export default function BskFixturePage() {
       instance
         .get(`/basketball/match/${fixture?.id}/incidents`)
         .then((res) => res.data),
-    { refetchOnWindowFocus: false, enabled: false }
+    { refetchOnWindowFocus: false, enabled: !!fixture?.id }
   );
 
   if (isError || isError1 || isError2) {

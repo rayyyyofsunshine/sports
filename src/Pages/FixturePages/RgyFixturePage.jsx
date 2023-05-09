@@ -1,4 +1,4 @@
-import React, { useState, useContext, useEffect } from "react";
+import React, { useState, useContext } from "react";
 import { useLocation, Link } from "react-router-dom";
 import { useQuery } from "react-query";
 import { instance } from "../../Api/Request";
@@ -21,11 +21,9 @@ export default function RgyFixturePage() {
 
   const { isLoading, isError, refetch } = useFetchRgyData(formattedDate);
 
-  useEffect(() => {
-    if (!rgyData?.[formattedDate]) {
-      refetch();
-    }
-  }, [formattedDate, rgyData, refetch]);
+  if (!rgyData?.[formattedDate]) {
+    refetch();
+  }
 
   const bestMatch =
     rgyData?.[formattedDate] &&

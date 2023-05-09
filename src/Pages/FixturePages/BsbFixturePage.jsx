@@ -1,4 +1,4 @@
-import React, { useState, useContext, useEffect } from "react";
+import React, { useState, useContext } from "react";
 import { useLocation } from "react-router";
 import { useQuery } from "react-query";
 import { instance } from "../../Api/Request";
@@ -23,11 +23,9 @@ export default function BsbFixturePage() {
 
   const { isLoading, isError, refetch } = useFetchBsbData(formattedDate);
 
-  useEffect(() => {
-    if (!bsbData?.[formattedDate]) {
-      refetch();
-    }
-  }, [formattedDate, bsbData, refetch]);
+  if (!bsbData?.[formattedDate]) {
+    refetch();
+  }
 
   const bestMatch =
     bsbData?.[formattedDate] &&

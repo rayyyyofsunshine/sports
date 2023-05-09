@@ -1,4 +1,4 @@
-import React, { useContext, useState, useEffect } from "react";
+import React, { useContext, useState } from "react";
 import { useLocation } from "react-router";
 import { useQuery } from "react-query";
 import { instance } from "../../Api/Request";
@@ -25,11 +25,9 @@ export default function HkyFixturePage() {
 
   const { isLoading, isError, refetch } = useFetchHkyData(formattedDate);
 
-  useEffect(() => {
-    if (!hkyData?.[formattedDate]) {
-      refetch();
-    }
-  }, [formattedDate, hkyData, refetch]);
+  if (!hkyData?.[formattedDate]) {
+    refetch();
+  }
 
   const bestMatch =
     hkyData?.[formattedDate] &&
