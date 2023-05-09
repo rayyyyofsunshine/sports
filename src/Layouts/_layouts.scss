@@ -310,15 +310,15 @@
           margin-left: -0.35em;
         }
         .winning-team {
-          border: 2px solid #f4b9b3;
-          background-color: #f6dddb;
+          border: 2px solid #fdd50b;
+          background-color: #f4eab4;
         }
         .more-goals {
           position: absolute;
           bottom: -5px;
-          i {
-            color: black;
-            background-color: white;
+          .icon {
+            color: #404040;
+            background-color: #f1e39b;
             border-radius: 50%;
             box-shadow: 0 0 10px -2px rgba(0, 0, 0, 0.2);
           }

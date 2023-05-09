@@ -1,3 +1,12 @@
+import { faFutbol } from "@fortawesome/free-regular-svg-icons";
+import {
+  faBaseball,
+  faBaseballBatBall,
+  faBasketball,
+  faFootball,
+  faHockeyPuck,
+} from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import moment from "moment";
 import React from "react";
 import { useNavigate } from "react-router";
@@ -93,7 +102,22 @@ export default function TableFixtureList({
                 />
                 {homeScore > awayScore && (
                   <span className="more-goals goals-home">
-                    <i className="fas fa-futbol"></i>
+                    <FontAwesomeIcon
+                      className="icon"
+                      icon={
+                        sport === "football"
+                          ? faFutbol
+                          : sport === "basketball"
+                          ? faBasketball
+                          : sport === "baseball"
+                          ? faBaseball
+                          : sport === "hockey"
+                          ? faHockeyPuck
+                          : sport === "cricket"
+                          ? faBaseballBatBall
+                          : faFootball
+                      }
+                    />
                   </span>
                 )}
               </div>
@@ -122,7 +146,22 @@ export default function TableFixtureList({
                 />
                 {homeScore < awayScore && (
                   <span className="more-goals goals-away">
-                    <i className="fas fa-futbol"></i>
+                    <FontAwesomeIcon
+                      className="icon"
+                      icon={
+                        sport === "football"
+                          ? faFutbol
+                          : sport === "basketball"
+                          ? faBasketball
+                          : sport === "baseball"
+                          ? faBaseball
+                          : sport === "hockey"
+                          ? faHockeyPuck
+                          : sport === "cricket"
+                          ? faBaseballBatBall
+                          : faFootball
+                      }
+                    />
                   </span>
                 )}
               </div>

@@ -994,8 +994,8 @@ a.link {
 }
 
 .tableFixture-container__info--team .team--img .winning-team {
-  border: 2px solid #f4b9b3;
-  background-color: #f6dddb;
+  border: 2px solid #fdd50b;
+  background-color: #f4eab4;
 }
 
 .tableFixture-container__info--team .team--img .more-goals {
@@ -1003,9 +1003,9 @@ a.link {
   bottom: -5px;
 }
 
-.tableFixture-container__info--team .team--img .more-goals i {
-  color: black;
-  background-color: white;
+.tableFixture-container__info--team .team--img .more-goals .icon {
+  color: #404040;
+  background-color: #f1e39b;
   border-radius: 50%;
   -webkit-box-shadow: 0 0 10px -2px rgba(0, 0, 0, 0.2);
           box-shadow: 0 0 10px -2px rgba(0, 0, 0, 0.2);
@@ -3186,8 +3186,8 @@ a.link {
 }
 
 .tableFixture-container__info--team .team--img .winning-team {
-  border: 2px solid #f4b9b3;
-  background-color: #f6dddb;
+  border: 2px solid #fdd50b;
+  background-color: #f4eab4;
 }
 
 .tableFixture-container__info--team .team--img .more-goals {
@@ -3195,9 +3195,9 @@ a.link {
   bottom: -5px;
 }
 
-.tableFixture-container__info--team .team--img .more-goals i {
-  color: black;
-  background-color: white;
+.tableFixture-container__info--team .team--img .more-goals .icon {
+  color: #404040;
+  background-color: #f1e39b;
   border-radius: 50%;
   -webkit-box-shadow: 0 0 10px -2px rgba(0, 0, 0, 0.2);
           box-shadow: 0 0 10px -2px rgba(0, 0, 0, 0.2);
@@ -5813,8 +5813,8 @@ a.link {
 }
 
 .tableFixture-container__info--team .team--img .winning-team {
-  border: 2px solid #f4b9b3;
-  background-color: #f6dddb;
+  border: 2px solid #fdd50b;
+  background-color: #f4eab4;
 }
 
 .tableFixture-container__info--team .team--img .more-goals {
@@ -5822,9 +5822,9 @@ a.link {
   bottom: -5px;
 }
 
-.tableFixture-container__info--team .team--img .more-goals i {
-  color: black;
-  background-color: white;
+.tableFixture-container__info--team .team--img .more-goals .icon {
+  color: #404040;
+  background-color: #f1e39b;
   border-radius: 50%;
   -webkit-box-shadow: 0 0 10px -2px rgba(0, 0, 0, 0.2);
           box-shadow: 0 0 10px -2px rgba(0, 0, 0, 0.2);
