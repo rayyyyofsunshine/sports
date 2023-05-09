@@ -34,7 +34,6 @@ export default function TableBox({ sport, height }) {
     <div className="tableBox-container">
       <div className="tableBox-container--mask"></div>
       <div
-        style={{ position: "sticky", top: "0", zIndex: "2" }}
         className={`tableBox-container__header--wrappper ${
           isHeaderActive ? "header--wrapper-active" : ""
         }`}

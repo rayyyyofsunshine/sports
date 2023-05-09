@@ -1171,11 +1171,11 @@ a.link {
 }
 
 .upcomingFixture-container__header__arrows {
-  color: #aaa;
   font-size: 0.8rem;
 }
 
 .upcomingFixture-container__header__arrows .icon {
+  color: #aaa;
   cursor: pointer;
   -webkit-transition: color 200ms ease-out;
   transition: color 200ms ease-out;
@@ -1745,6 +1745,10 @@ a.link {
     border-radius: unset;
   }
   .tableBox-container__header--wrappper {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 3em;
+    z-index: 2;
     margin: 0 -1em;
     background-color: whitesmoke;
     -webkit-box-shadow: none;
@@ -3359,11 +3363,11 @@ a.link {
 }
 
 .upcomingFixture-container__header__arrows {
-  color: #aaa;
   font-size: 0.8rem;
 }
 
 .upcomingFixture-container__header__arrows .icon {
+  color: #aaa;
   cursor: pointer;
   -webkit-transition: color 200ms ease-out;
   transition: color 200ms ease-out;
@@ -3933,6 +3937,10 @@ a.link {
     border-radius: unset;
   }
   .tableBox-container__header--wrappper {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 3em;
+    z-index: 2;
     margin: 0 -1em;
     background-color: whitesmoke;
     -webkit-box-shadow: none;
@@ -5982,11 +5990,11 @@ a.link {
 }
 
 .upcomingFixture-container__header__arrows {
-  color: #aaa;
   font-size: 0.8rem;
 }
 
 .upcomingFixture-container__header__arrows .icon {
+  color: #aaa;
   cursor: pointer;
   -webkit-transition: color 200ms ease-out;
   transition: color 200ms ease-out;
@@ -6556,6 +6564,10 @@ a.link {
     border-radius: unset;
   }
   .tableBox-container__header--wrappper {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 3em;
+    z-index: 2;
     margin: 0 -1em;
     background-color: whitesmoke;
     -webkit-box-shadow: none;

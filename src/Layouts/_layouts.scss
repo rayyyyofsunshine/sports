@@ -437,9 +437,9 @@
       margin: 0;
     }
     &__arrows {
-      color: #aaa;
       font-size: 0.8rem;
       .icon {
+        color: #aaa;
         cursor: pointer;
         transition: color 200ms ease-out;
         &:first-child {
@@ -816,6 +816,9 @@
     box-shadow: none;
     border-radius: unset;
     &__header--wrappper {
+      position: sticky;
+      top: 3em;
+      z-index: 2;
       margin: 0 -1em;
       background-color: whitesmoke;
       box-shadow: none;
