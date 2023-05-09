@@ -1,0 +1,71 @@
+.boxscore-container {
+  display: flex;
+  flex-direction: column;
+  &__player--wrapper {
+    &:last-child {
+      padding-top: 1em;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      thead {
+        font-size: 0.825rem;
+        color: #888;
+        tr {
+          border-bottom: 1px solid #c3c3c3;
+          td {
+            padding: 0.75em 0.5em;
+          }
+          td:not(:first-child) {
+            width: 24px;
+            text-align: center;
+          }
+          td:nth-child(4) {
+            width: 32px;
+          }
+          td:nth-child(5) {
+            width: 32px;
+          }
+          td:nth-child(6) {
+            width: 32px;
+          }
+        }
+      }
+      tbody {
+        font-size: 0.9rem;
+        tr {
+          td {
+            padding: 0.75em 0.5em;
+            .player--info {
+              display: flex;
+              flex-direction: column;
+              gap: 0.15em;
+              overflow: hidden;
+              a.link {
+                text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;
+                cursor: pointer;
+                &:hover {
+                  text-decoration: underline;
+                }
+              }
+              span {
+                font-size: 0.75rem;
+                color: #888;
+              }
+            }
+            &:not(:first-child) {
+              text-align: center;
+              width: 24px;
+            }
+          }
+          border-bottom: thin solid #e4e4e4;
+        }
+      }
+      &:first-child {
+        margin-bottom: 2.25em;
+      }
+    }
+  }
+}

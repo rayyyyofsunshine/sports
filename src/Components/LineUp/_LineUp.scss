@@ -1,0 +1,270 @@
+@import "./FourLineFormation/FourLineFormation";
+@import "./ThreeLineFormation/ThreeLineFormation";
+
+.lineup-container {
+  position: relative;
+  top: 60px;
+  height: 100vh;
+  min-height: 900px;
+  width: 100%;
+  img {
+    height: 100%;
+    width: 100%;
+  }
+  .home-team-formation-container,
+  .away-team-formation-container {
+    position: absolute;
+    padding: 0 1.5em;
+    top: -60px;
+    width: 100%;
+    height: 60px;
+    opacity: 0.85;
+    background-color: #74a72b;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    .team--info {
+      display: flex;
+      gap: 1em;
+      align-items: center;
+      h4 {
+        font-weight: 400;
+        font-size: 0.925rem;
+      }
+      img {
+        width: 30px;
+        height: 30px;
+      }
+      &:hover {
+        h4 {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  .away-team-formation-container {
+    top: unset;
+    bottom: -60px;
+  }
+}
+
+.circle {
+  border: 3px solid whitesmoke;
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: red;
+}
+
+.team-one {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+}
+
+.team-two {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  .circle {
+    background-color: royalblue;
+  }
+}
+
+.defenders-threeLine,
+.midfielders-threeLine,
+.strikers-threeLine,
+.defenders-fourLine,
+.defensive-midfielders-fourLine,
+.attacking-midfielders-fourLine,
+.strikers-fourLine,
+.goalkeeper {
+  .circle {
+    .number {
+      position: absolute;
+      font-size: 1.1rem;
+      font-weight: 600;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .goal {
+      position: absolute;
+      bottom: -7.5px;
+      left: -7.5px;
+      i {
+        border-radius: 50%;
+        font-size: 1.2rem;
+        background-color: white;
+        color: black;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+      }
+    }
+    .substitute {
+      position: absolute;
+      bottom: -7.5px;
+      right: -7.5px;
+      i {
+        font-size: 1.2rem;
+        background-color: red;
+        border-radius: 50%;
+        color: white;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+      }
+    }
+    .card {
+      position: absolute;
+      top: -6.5px;
+      right: -6.5px;
+      img {
+        border-radius: 2px;
+        width: 13.5px;
+        height: 18.5px;
+        transform: rotate(30deg);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+      }
+    }
+  }
+}
+
+.lineup-container--alt {
+  margin: 20px 0 -140px;
+  padding: 1.25em 1.5em 2em;
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    h4 {
+      text-transform: uppercase;
+      font-size: 0.85rem;
+    }
+    img {
+      width: 32.5px;
+      height: 32.5px;
+    }
+  }
+  &__body {
+    padding-top: 1.5em;
+    display: flex;
+    justify-content: space-between;
+    .home-team--lineup,
+    .away-team--lineup {
+      display: flex;
+      gap: 1.25em;
+      flex-direction: column;
+      align-items: flex-end;
+      .player {
+        display: flex;
+        gap: 1em;
+        font-size: 0.825rem;
+        &--number {
+          font-weight: 600;
+          color: #aaa;
+        }
+        i.fa-arrow-down {
+          color: red;
+        }
+        i.fa-futbol {
+          box-shadow: 0 0 5px -1px rgba(0, 0, 0, 0.6);
+        }
+        img {
+          transform: rotate(-30deg);
+          width: 11.5px;
+          height: 16.5px;
+          box-shadow: 0 0 5px -1px rgba(0, 0, 0, 0.6);
+        }
+      }
+    }
+    .home-team--lineup {
+      align-items: flex-start;
+    }
+  }
+}
+
+.substitutes-container {
+  margin-top: 150px;
+}
+
+.substitutes-container,
+.manager-container {
+  padding: 0em 1.5em 2em;
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    h4 {
+      text-transform: uppercase;
+      font-size: 0.85rem;
+    }
+    img {
+      width: 32.5px;
+      height: 32.5px;
+    }
+  }
+  &__body {
+    padding-top: 1.5em;
+    display: flex;
+    justify-content: space-between;
+    .home-team--subst,
+    .away-team--subst {
+      display: flex;
+      gap: 1.25em;
+      flex-direction: column;
+      align-items: flex-end;
+      .player {
+        display: flex;
+        gap: 1em;
+        font-size: 0.825rem;
+        a.link:hover {
+          text-decoration: underline;
+        }
+        &--number {
+          font-weight: 600;
+          color: #aaa;
+        }
+        i.fa-arrow-up {
+          color: rgb(16, 172, 16);
+        }
+        i.fa-futbol {
+          box-shadow: 0 0 5px -1px rgba(0, 0, 0, 0.6);
+        }
+        img {
+          transform: rotate(-30deg);
+          width: 11.5px;
+          height: 16.5px;
+          box-shadow: 0 0 5px -1px rgba(0, 0, 0, 0.6);
+        }
+      }
+    }
+    .home-team--subst {
+      align-items: flex-start;
+    }
+  }
+}
+
+.manager-container {
+  padding-bottom: 3em;
+}
+
+@media only screen and (max-width: 1024px) {
+  .lineup-container {
+    .home-team-formation-container,
+    .away-team-formation-container {
+      padding: 0 0.75em 0 0.5em;
+      width: 100%;
+      .team--info {
+        gap: 0.65em;
+      }
+    }
+  }
+  .substitutes-container,
+  .manager-container {
+    padding: 0em 1.25em 2em;
+  }
+}

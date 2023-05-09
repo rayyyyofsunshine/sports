@@ -1,0 +1,154 @@
+.scorecard-container {
+  display: flex;
+  flex-direction: column;
+  &__batbowl--wrapper {
+    &:last-child {
+      padding-top: 1em;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      thead {
+        font-size: 0.825rem;
+        color: #888;
+        tr {
+          border-bottom: 1px solid #c3c3c3;
+          td {
+            padding: 0.75em 0.5em;
+          }
+          td:not(:first-child) {
+            width: 24px;
+            text-align: center;
+          }
+          td:last-child {
+            width: 44px;
+          }
+        }
+      }
+      tbody {
+        font-size: 0.925rem;
+        tr {
+          td {
+            padding: 0.75em 0.5em;
+            .player--info {
+              display: flex;
+              flex-direction: column;
+              gap: 0.15em;
+              p:hover {
+                text-decoration: underline;
+                cursor: pointer;
+              }
+              span {
+                font-size: 0.75rem;
+                color: #888;
+              }
+            }
+            &:not(:first-child) {
+              text-align: center;
+            }
+          }
+          border-bottom: thin solid #e4e4e4;
+        }
+      }
+    }
+  }
+  &__yet-to-bat--wrapper {
+    padding: 0.75em 0.5em;
+    border-bottom: 1px solid #e4e4e4;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    .players--left {
+      display: flex;
+      flex-wrap: wrap;
+      span {
+        color: #888;
+        font-size: 0.875rem;
+        position: relative;
+        white-space: nowrap;
+        &:not(:last-child) {
+          margin-right: 1em;
+          &::after {
+            content: "";
+            position: absolute;
+            margin-left: 0.5em;
+            bottom: 47.5%;
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            background-color: #888;
+            transform: translate(0, 50%);
+          }
+        }
+        &:hover {
+          text-decoration: underline;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  &__fall-of-wickets--wrapper {
+    padding: 0.75em 0.5em;
+    border-bottom: 1px solid #e4e4e4;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    .fall-of-wickets {
+      display: flex;
+      flex-wrap: wrap;
+      p {
+        font-size: 0.925rem;
+        margin-bottom: 0.15em;
+        span {
+          color: #888;
+          font-size: 0.875rem;
+          position: relative;
+          white-space: nowrap;
+        }
+        &:not(:last-child) {
+          span {
+            margin-right: 1.15em;
+            &::after {
+              content: "";
+              position: absolute;
+              margin-left: 0.5em;
+              bottom: 47.5%;
+              width: 4px;
+              height: 4px;
+              border-radius: 50%;
+              background-color: #888;
+              transform: translate(0, 50%);
+            }
+          }
+        }
+      }
+    }
+  }
+  &__contents--wrapper {
+    display: flex;
+    flex-direction: column;
+    .container--extra {
+      padding: 1em 0.5em;
+      display: flex;
+      border-bottom: 1px solid #e4e4e4;
+      p {
+        flex: 0.675;
+      }
+      p:last-child {
+        flex: 0.325;
+      }
+      .extras:last-child {
+        margin-right: 0.15em;
+      }
+      .extras:not(:last-child) {
+        position: relative;
+        margin-right: 0.5em;
+        &::after {
+          content: ", ";
+          position: absolute;
+          bottom: 0;
+        }
+      }
+    }
+  }
+}

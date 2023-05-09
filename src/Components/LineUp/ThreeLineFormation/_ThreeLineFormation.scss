@@ -1,0 +1,73 @@
+.defenders-threeLine,
+.midfielders-threeLine,
+.strikers-threeLine,
+.goalkeeper {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+  color: white;
+  height: 7.75%;
+  .circle {
+    position: relative;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 0.875rem;
+    cursor: pointer;
+    &:hover {
+      .player-name {
+        text-decoration: underline;
+      }
+    }
+    .player-name {
+      position: absolute;
+      bottom: -30px;
+      font-size: 0.875rem;
+      word-spacing: 1px;
+      white-space: nowrap;
+      cursor: pointer;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.team-one {
+  .defenders-threeLine {
+    top: 28%;
+  }
+  .goalkeeper {
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+  .midfielders-threeLine {
+    top: 53%;
+  }
+  .strikers-threeLine {
+    top: 78%;
+  }
+}
+
+.team-two {
+  .strikers-threeLine {
+    top: 10%;
+  }
+  .midfielders-threeLine {
+    top: 34%;
+  }
+  .defenders-threeLine {
+    top: 60%;
+  }
+  .goalkeeper {
+    bottom: 5%;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+}

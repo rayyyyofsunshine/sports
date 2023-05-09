@@ -1,0 +1,178 @@
+@import "../../Components/BoxScore/BoxScore";
+@import "../../Components/FixtureStatistics/FixtureStatistics";
+@import "../../Components/PlayByPlay/PlayByPlay";
+@import "../../Components/LineUp/LineUp";
+@import "../../Components/ScoreCard/ScoreCard";
+
+.fixturePage-container {
+  width: 100%;
+  height: 100%;
+  padding: 1em 0 1.5em;
+  background-color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &--tabs {
+    width: 600px;
+    margin-top: 0.25em;
+    background-color: white;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    border-radius: 5px 5px 15px 15px;
+    .tabs-container--alt {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: calc(100vh - 312.5px);
+      color: #888;
+      h4 {
+        font-weight: 400;
+      }
+    }
+    .scorecard-container__wrapper {
+      padding: 0 1.5em;
+      &--filter {
+        padding: 1.15em 0 0;
+        display: flex;
+        justify-content: space-around;
+        border-bottom: 1px solid #e4e4e4;
+        p {
+          flex: 1;
+          text-align: center;
+          font-weight: 600;
+          font-size: 0.775rem;
+          padding-bottom: 1.5em;
+          position: relative;
+          cursor: pointer;
+          color: #888;
+        }
+        .active {
+          color: black;
+          &:after {
+            content: " ";
+            width: 100%;
+            height: 4px;
+            border-radius: 8px;
+            background-color: #c3c3c3;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translate(-50%, 0);
+          }
+        }
+      }
+      &--contents {
+        padding: 1em 0;
+      }
+    }
+    .stats-container__wrapper {
+      padding: 0.75em 1.5em 0.25em;
+      &--filter {
+        padding: 0.925em 0 0;
+        display: flex;
+        justify-content: space-around;
+        border-bottom: 1px solid #e4e4e4;
+        p {
+          flex: 1;
+          text-align: center;
+          font-weight: 600;
+          font-size: 0.775rem;
+          padding-bottom: 1.5em;
+          position: relative;
+          cursor: pointer;
+          color: #888;
+        }
+        .active {
+          color: black;
+          &:after {
+            content: " ";
+            width: 100%;
+            height: 4px;
+            border-radius: 8px;
+            background-color: #c3c3c3;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translate(-50%, 0);
+          }
+        }
+      }
+      &--header {
+        padding: 1em 0.5em;
+        display: flex;
+        justify-content: space-between;
+        .home--team,
+        .away--team {
+          display: flex;
+          gap: 0.75em;
+          align-items: center;
+          img {
+            width: 30px;
+            height: 30px;
+          }
+          h4 {
+            font-size: 0.875rem;
+            position: relative;
+            width: fit-content;
+            &::after {
+              position: absolute;
+              content: " ";
+              background: #333;
+              height: 1px;
+              width: 100%;
+              left: 0;
+              bottom: 0;
+              transform: scaleX(0);
+              transform-origin: right;
+              transition: transform 0.65s cubic-bezier(0.19, 1, 0.22, 1);
+            }
+          }
+          &:hover {
+            h4::after {
+              transform: scaleX(1);
+              transform-origin: left;
+              transition-delay: 0s;
+            }
+          }
+        }
+      }
+      &--content {
+        &--sub-header {
+          padding: 0.5em 0;
+          border-bottom: 1px solid #e5e5e5;
+          display: flex;
+          justify-content: center;
+          p {
+            font-size: 0.875rem;
+            color: #888;
+          }
+        }
+        &:not(:last-child) {
+          padding-bottom: 1em;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .fixturePage-container {
+    position: relative;
+    padding: 0;
+    &--tabs {
+      width: 100%;
+      margin-top: 0;
+      background-color: transparent;
+      box-shadow: none;
+      border-radius: 0;
+      .stats-container__wrapper {
+        padding: 0.25em 1.25em;
+        &--filter {
+          overflow-x: auto;
+        }
+        &--header {
+          padding: 1em 0.25em;
+        }
+      }
+    }
+  }
+}

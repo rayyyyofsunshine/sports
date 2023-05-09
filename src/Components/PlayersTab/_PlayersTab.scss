@@ -1,0 +1,107 @@
+.playersTab-container {
+  width: 100%;
+  padding: 1em 0 0;
+  min-height: 100vh;
+  position: relative;
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    thead {
+      color: #aaa;
+      font-weight: 600;
+      text-transform: uppercase;
+      td {
+        padding: 1em 0em 2em;
+        font-size: 0.775rem;
+        &:first-child {
+          text-align: left !important;
+          padding-left: 2.5em;
+        }
+        &:not(:nth-child(2)) {
+          padding-right: 0em;
+          text-align: center;
+        }
+        &:last-child {
+          padding-right: 1em;
+        }
+      }
+    }
+    tbody {
+      tr {
+        font-size: 0.875rem;
+        &:nth-child(even) {
+          background-color: #eee;
+        }
+        td {
+          min-width: 40px;
+          padding: 0.85em 0;
+          font-weight: 500;
+          color: #777;
+          &:first-child {
+            width: 30px;
+            padding-right: 5em;
+            text-align: center;
+            padding-left: 2.2em;
+          }
+          &:not(:nth-child(2)) {
+            text-align: center;
+          }
+          &:nth-child(2) {
+            cursor: pointer;
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+          &:last-child {
+            padding-right: 1em;
+          }
+          .player {
+            display: flex;
+            gap: 0.65em;
+            align-items: center;
+            img {
+              width: 40px;
+              height: 40px;
+              border-radius: 50%;
+            }
+          }
+        }
+      }
+      td:not(:first-child) {
+        min-width: 60px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .playersTab-container {
+    table {
+      thead {
+        tr {
+          td {
+            &:first-child {
+              padding-left: 1.25em;
+            }
+            &:nth-child(2) {
+              padding-left: 0.5em;
+            }
+          }
+        }
+      }
+      tbody {
+        tr {
+          td {
+            &:first-child {
+              padding-left: 1.2em;
+              padding-right: 2.5em;
+            }
+            &:last-child {
+              min-width: 100px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

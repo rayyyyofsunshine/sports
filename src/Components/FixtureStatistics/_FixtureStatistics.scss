@@ -1,0 +1,24 @@
+.fixtureStats-container__wrapper {
+  padding: 1em;
+  margin: 0 auto;
+  table {
+    width: 100%;
+    tr {
+      td {
+        border-bottom: 1px solid #e8e8e8;
+        padding: 0.6em 0;
+        text-align: center;
+      }
+      .team--value {
+        font-size: 0.9rem;
+        width: 15%;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .fixtureStats-container__wrapper {
+    padding: 1em 0;
+  }
+}

@@ -1,0 +1,150 @@
+.plays-container__wrapper {
+  padding: 0 1.5em;
+  &--filter {
+    padding: 1.15em 0 0;
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 1px solid #e4e4e4;
+    p {
+      flex: 1;
+      text-align: center;
+      font-weight: 600;
+      font-size: 0.775rem;
+      padding-bottom: 1.5em;
+      position: relative;
+      cursor: pointer;
+      color: #888;
+    }
+    .active {
+      color: black;
+      &:after {
+        content: " ";
+        width: 100%;
+        height: 4px;
+        border-radius: 8px;
+        background-color: #c3c3c3;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, 0);
+      }
+    }
+  }
+  &--contents {
+    padding: 1em 0;
+  }
+}
+.plays-table {
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    thead {
+      tr {
+        width: 100%;
+        td {
+          width: 40%;
+          padding: 0.75em 0.75em 1.25em;
+          &:nth-child(2) {
+            width: 10%;
+          }
+          .team--info {
+            display: flex;
+            align-items: center;
+            gap: 0.75em;
+            img {
+              width: 30px;
+              height: 30px;
+              &:hover + h4 {
+                text-decoration: underline;
+              }
+            }
+            h4 {
+              font-size: 0.875rem;
+              &:hover {
+                text-decoration: underline;
+              }
+            }
+          }
+        }
+      }
+    }
+    tbody {
+      tr {
+        td {
+          padding: 0.75em 0;
+          .detailed--info {
+            display: flex;
+            align-items: center;
+            gap: 0.75em;
+            img {
+              width: 25px;
+              height: 25px;
+            }
+            p {
+              font-size: 0.825rem;
+            }
+          }
+          .subst--out,
+          .subst--in,
+          .stats--info {
+            display: flex;
+            gap: 0.45em;
+            align-items: center;
+            padding-bottom: 0.25em;
+          }
+          .player-photo {
+            border-radius: 50%;
+          }
+          p a.link:hover {
+            cursor: pointer;
+            text-decoration: underline;
+          }
+        }
+        .time {
+          p {
+            color: #888;
+            font-size: 0.925rem;
+          }
+          .play--score {
+            color: #888;
+            font-weight: 600;
+            font-size: 0.825rem;
+          }
+          i.fa-futbol {
+            position: relative;
+            margin-top: 0.25em;
+            span {
+              position: absolute;
+              right: -3.5px;
+              top: -4px;
+              font-size: 0.775rem;
+              color: #333;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .plays-container__wrapper {
+    padding: 0 0.25em;
+    .plays-table {
+      table {
+        tbody {
+          tr {
+            td {
+              padding: 0.75em 0.25em;
+            }
+            .time {
+              p {
+                white-space: nowrap;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+.stats--table__value {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5em 0;
+  border-bottom: 1px solid #e4e4e4;
+  p {
+    flex: 0.5;
+    &:first-child {
+      color: #333;
+    }
+  }
+}

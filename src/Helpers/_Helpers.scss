@@ -1,0 +1,33 @@
+.player-footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  &--home,
+  &--away {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    a.link {
+      font-size: 0.825rem;
+      color: #333;
+      &:not(:last-child) {
+        margin-bottom: 0.25em;
+      }
+      .time {
+        &:first-child {
+          padding-left: 0.5em;
+        }
+      }
+      .time ~ .time::before {
+        margin-right: 0.1em;
+        content: ", ";
+      }
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  &--away {
+    align-items: flex-end;
+  }
+}

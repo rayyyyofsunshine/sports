@@ -1,0 +1,261 @@
+.fixturesTab-container__body {
+  &__box {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5em;
+    box-shadow: 0 0 4px -1px #aaa;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    margin-bottom: 1.25em !important;
+    cursor: pointer;
+    &__row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 1.5em;
+      &--left,
+      &--right {
+        display: flex;
+        width: 45%;
+        align-items: center;
+        justify-content: space-between;
+        a.link:hover {
+          .teamInfo h3::after {
+            transform: scaleX(1);
+            transform-origin: right;
+            transition-delay: 0s;
+          }
+        }
+        .teamInfo {
+          display: flex;
+          gap: 1em;
+          align-items: center;
+          color: #333;
+          h3 {
+            font-size: 1rem;
+            width: fit-content;
+            position: relative;
+            cursor: pointer;
+            &::after {
+              position: absolute;
+              content: " ";
+              bottom: 0px;
+              background: #333;
+              left: 0;
+              width: 100%;
+              height: 1px;
+              transform: scaleX(0);
+              transform-origin: right;
+              transition: transform 0.65s cubic-bezier(0.19, 1, 0.22, 1);
+            }
+          }
+          img {
+            width: 47.5px;
+            height: 47.5px;
+            cursor: pointer;
+          }
+        }
+        .scoreInfo {
+          span {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #aaa;
+            display: flex;
+            gap: 0.15em;
+            flex-direction: column;
+            .display-over {
+              font-size: 0.875rem;
+              text-align: center;
+            }
+          }
+          .cricket--score {
+            font-size: 1.25rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+          }
+          .active {
+            color: #000;
+          }
+        }
+      }
+      &:last-child {
+        padding: 1.5em 0 0;
+        border-top: 1px solid #aaa;
+      }
+    }
+    .bottom--row {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25em;
+      p {
+        font-size: 0.875rem;
+        span {
+          font-size: 0.85rem;
+        }
+      }
+      .fixture-info {
+        display: flex;
+        gap: 0.5em;
+        align-items: center;
+      }
+      &:first-child {
+        align-items: flex-start;
+        p:first-child {
+          cursor: pointer;
+          &:hover {
+            a {
+              text-decoration: underline;
+            }
+          }
+        }
+        .fixture-info {
+          p:first-child {
+            color: #888;
+          }
+          p:last-child:hover {
+            cursor: pointer;
+            text-decoration: underline;
+          }
+        }
+      }
+      &:last-child {
+        text-transform: capitalize;
+        align-items: flex-end;
+        .fixture-info {
+          justify-content: flex-end;
+          p:last-child {
+            color: #888;
+          }
+        }
+      }
+    }
+    .vs-container {
+      color: #888;
+      display: grid;
+      place-items: center;
+      width: 25px;
+      height: 25px;
+      background-color: rgba(0, 0, 0, 0.2);
+      border-radius: 100%;
+      font-weight: 600;
+      span {
+        font-size: 0.875rem;
+      }
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .fixturesTab-container__body {
+    &__box {
+      padding: 1.5em 1.25em;
+      flex-direction: row;
+      gap: 1em;
+      border-radius: 8px;
+      box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      &__row {
+        flex-direction: column;
+        padding-bottom: 0;
+        padding: 0.25em 0;
+        &:first-child {
+          width: 70%;
+          gap: 0.75em;
+        }
+        &--left {
+          .teamInfo {
+            h3 {
+              margin-top: 0.25em;
+            }
+          }
+          .scoreInfo {
+            span {
+              margin-top: 0.25em;
+            }
+          }
+        }
+        &--right {
+          .teamInfo {
+            h3 {
+              margin-top: -0.25em;
+            }
+          }
+          .scoreInfo {
+            span {
+              margin-top: -0.25em;
+            }
+          }
+        }
+        &:last-child {
+          border: none;
+          padding: 0;
+          border-left: 1px solid rgba(0, 0, 0, 0.1);
+          padding-left: 1.75em;
+          width: 30%;
+        }
+        &--left,
+        &--right {
+          width: 100%;
+          justify-content: flex-start;
+          .teamInfo {
+            gap: 0.75em;
+            img {
+              width: 33.5px;
+              height: 33.5px;
+            }
+            h3 {
+              font-size: 1rem;
+              font-weight: 500;
+            }
+          }
+          .scoreInfo {
+            padding-left: 0.75em;
+            margin-left: auto;
+            span {
+              font-size: 1rem;
+              gap: 0;
+              font-weight: 600;
+            }
+            .cricket--score {
+              font-size: 0.975rem;
+            }
+          }
+        }
+        &--right {
+          flex-direction: row-reverse;
+          .teamInfo {
+            flex-direction: row-reverse;
+          }
+        }
+      }
+      .bottom--row {
+        height: 100%;
+        .date-col {
+          margin: 0 auto;
+          color: #333;
+          height: 100%;
+          gap: 0.25em;
+          font-size: 0.9rem;
+          text-align: center;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+        &:first-child p:first-child {
+          display: none;
+        }
+        &:last-child {
+          display: none;
+        }
+      }
+      .vs-container {
+        display: none;
+      }
+    }
+  }
+}
